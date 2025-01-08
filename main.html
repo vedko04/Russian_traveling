@@ -177,5 +177,24 @@
             <p class="footer_name">© 2024. Vedeneev Ivan</p>
     </div>
 </footer>
+<script>
+    var buttons = document.getElementsByTagName("button");
+
+function setActive(el) {
+  for (var i = 0; i < buttons.length; i++) {
+      if (buttons[i] == el) {
+        el.classList.toggle("header_button");
+      } else {
+        buttons[i].classList.remove('header_button');
+      }
+    }
+}
+
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function() {
+    setActive(this);
+  });
+}
+</script>
 </body>
 </html>
